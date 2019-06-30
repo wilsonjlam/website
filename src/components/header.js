@@ -2,6 +2,8 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 
+import "./header.module.css";
+
 const ListLink = ({ to, children }) => (
 	<li style={{ display: "inline-block", margin: "1rem" }}>
 		<Link to={to}>
@@ -13,20 +15,9 @@ const ListLink = ({ to, children }) => (
 );
 
 const Header = ({ siteTitle }) => (
-	<header
-		style={{
-			background: "rebeccapurple",
-			marginBottom: "1.45rem",
-		}}
-	>
-		<div
-			style={{
-				margin: "0 auto",
-				maxWidth: 960,
-				padding: "1.45rem 1.0875rem",
-			}}
-		>
-			<h1 style={{ display: "inline", margin: 0 }}>
+	<header>
+		<div>
+			<h1>
 				<Link
 					to="/"
 					style={{
@@ -37,13 +28,7 @@ const Header = ({ siteTitle }) => (
 					{siteTitle}
 				</Link>
 			</h1>
-			<ul style={{
-					listStyle: "none",
-					float: "right",
-					paddingBottom: "1.45rem",
-					display: "inline",
-				}}
-			>
+			<ul>
 				<ListLink to="/">Home</ListLink>
 				<ListLink to="/about">About</ListLink>
 				<ListLink to="/contact">Contact</ListLink>
