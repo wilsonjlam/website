@@ -24,14 +24,20 @@ const Layout = ({ children }) => {
 	`);
 
 	return (
-		<>
+		<div style={{
+			height: '100vh',
+			width: '100vw',
+		}}>
 			<Header siteTitle={data.site.siteMetadata.title} />
 			<div
 				style={{
+					display: "flex",
+					justifyContent: "space-between",
+					height: "100%",
+					alignItems: "center",
+					flexDirection: "column",
 					margin: "0 auto",
 					maxWidth: 960,
-					padding: "0px 1.0875rem 1.45rem",
-					paddingTop: 0,
 				}}
 			>
 				<main>{children}</main>
@@ -41,7 +47,7 @@ const Layout = ({ children }) => {
 					<a href="https://www.gatsbyjs.org">Gatsby</a>
 				</footer>
 			</div>
-		</>
+		</div>
 	);
 };
 

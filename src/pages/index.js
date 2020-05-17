@@ -4,16 +4,25 @@ import Layout from "../components/layout";
 import Image from "../components/image";
 import SEO from "../components/seo";
 
-const IndexPage = () => (
-	<Layout>
-		<SEO title="Home" />
-		<h1>Hi people</h1>
-		<p>Welcome to your new Gatsby site.</p>
-		<p>Now go build something great.</p>
-		<div style={{ maxWidth: "300px", marginBottom: "1.45rem" }}>
-			<Image />
-		</div>
-	</Layout>
-);
-
+function IndexPage() {
+	return (
+		<Layout>
+			<SEO title="Home" />
+			<h1>Hey there!</h1>
+			<div>A little about myself: I'm a coffee enthusiast (some say snob and they're probably not wrong), software engineer, and snowboarder.</div>
+			<h2>2020 Goals</h2>
+			<ul>
+				<li>Build a site</li>
+				<li>Build a coffee app</li>
+				<li>Post to Instagram 52 times</li>
+			</ul>
+			<h2>Life Goals</h2>
+			<ul>
+				<li>Live abroad somewhere</li>
+				<li>Visit all the continents (excluding Antartica)</li>
+			</ul>
+			<div></div>
+		</Layout>
+	);
+}
 export default IndexPage;
