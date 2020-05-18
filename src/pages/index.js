@@ -9,7 +9,9 @@ function IndexPage() {
 		<Layout>
 			<SEO title="Home" />
 			<h1>Hey there!</h1>
-			<div>A little about myself: I'm a coffee enthusiast (some say snob and they're probably not wrong), software engineer, and snowboarder.</div>
+			<div>
+				A little about myself: I'm a coffee enthusiast (some say snob and they're probably not wrong), software engineer, and snowboarder.
+			</div>
 			<h2>2020 Goals</h2>
 			<ul>
 				<li>Build a site</li>

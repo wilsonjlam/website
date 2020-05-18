@@ -30,7 +30,7 @@ const Header = ({ siteTitle }) => (
 			</h1>
 			<ul>
 				<ListLink to="/">Home</ListLink>
-				<ListLink to="/about">About</ListLink>
+				<ListLink to="/feed">Feed</ListLink>
 				<ListLink to="/contact">Contact</ListLink>
 			</ul>
 		</div>

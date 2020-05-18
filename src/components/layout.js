@@ -26,6 +26,7 @@ const Layout = ({ children }) => {
 	return (
 		<div style={{
 			height: '100vh',
+			maxHeight: '100vh',
 			width: '100vw',
 		}}>
 			<Header siteTitle={data.site.siteMetadata.title} />
@@ -33,7 +34,6 @@ const Layout = ({ children }) => {
 				style={{
 					display: "flex",
 					justifyContent: "space-between",
-					height: "100%",
 					alignItems: "center",
 					flexDirection: "column",
 					margin: "0 auto",
@@ -42,9 +42,7 @@ const Layout = ({ children }) => {
 			>
 				<main>{children}</main>
 				<footer>
-					© {new Date().getFullYear()}, Built with
-					{" "}
-					<a href="https://www.gatsbyjs.org">Gatsby</a>
+					Hi there this is gatsby site
 				</footer>
 			</div>
 		</div>
