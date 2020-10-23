@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => (
 			<ul>
 				<ListLink to="/">Home</ListLink>
 				<ListLink to="/feed">Feed</ListLink>
-				<ListLink to="/contact">Contact</ListLink>
+				<ListLink to="/about">About</ListLink>
 			</ul>
 		</div>
 	</header>
