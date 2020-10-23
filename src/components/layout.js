@@ -7,13 +7,18 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
+import {
+	useStaticQuery,
+	graphql
+} from "gatsby";
 
 import Header from "./header";
 import "./layout.css";
 
-const Layout = ({ children }) => {
-	const data = useStaticQuery(graphql`
+const Layout = ({
+	children
+}) => {
+	const data = useStaticQuery(graphql `
 		query SiteTitleQuery {
 			site {
 				siteMetadata {
@@ -25,9 +30,8 @@ const Layout = ({ children }) => {
 
 	return (
 		<div style={{
-			height: '100vh',
-			maxHeight: '100vh',
-			width: '100vw',
+			height: '100%',
+			width: '100%',
 		}}>
 			<Header siteTitle={data.site.siteMetadata.title} />
 			<div
@@ -41,9 +45,6 @@ const Layout = ({ children }) => {
 				}}
 			>
 				<main>{children}</main>
-				<footer>
-					Hi there this is gatsby site
-				</footer>
 			</div>
 		</div>
 	);

@@ -1,16 +1,24 @@
-import React from "react";
-import { Link } from "gatsby";
+import React, {
+	useEffect,
+	useState
+} from "react";
+import {
+	Link
+} from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const FeedPage = () => (
-	<Layout>
+export default function FeedPage() {
+	const [image, setImage] = useState()
+	useEffect(() => {
+		fetch('https://www.instagram.com/p/CEe0gBCBRwF/media')
+			.then(response => setImage(response.url));
+	}, []);
+	return (
+		<Layout>
 		<SEO title="About" />
-		<h1>Hi there</h1>
-		<a href="mailto:test@gmail.com">test@gmail.com</a>
-		<img src="https://www.instagram.com/p/B9KJxV_hKlc/" />
+		<img src={image}/>
 	</Layout>
-);
-
-export default FeedPage;
+	);
+}

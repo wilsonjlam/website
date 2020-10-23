@@ -1,10 +1,15 @@
-import { Link } from "gatsby";
+import {
+	Link
+} from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 
 import "./header.module.css";
 
-const ListLink = ({ to, children }) => (
+const ListLink = ({
+	to,
+	children
+}) => (
 	<li style={{ display: "inline-block", margin: "1rem" }}>
 		<Link to={to}>
 			<h2>
@@ -14,7 +19,9 @@ const ListLink = ({ to, children }) => (
 	</li>
 );
 
-const Header = ({ siteTitle }) => (
+const Header = ({
+	siteTitle
+}) => (
 	<header>
 		<div>
 			<h1>
